@@ -18,18 +18,19 @@
 <body>
 <p class="clear box layui-main login">
 
-    <form class="layui-form layui-form-pane1" action="ulogin" method="post" style=" padding-top: 10%;padding-left: 33%">
+    <form class="layui-form layui-form-pane1" action="loginValidate" method="get" style=" padding-top: 10%;padding-left: 33%">
 <p class="layui-form-item" style=" margin-bottom: -5%;">
     <label class="layui-form-label">用户名：</label>
 <p class="layui-input-block">
-    <input type="text" name="user.name" lay-verify="uname" required
+    <input id="userName" type="text" name="name" lay-verify="uname" required
            placeholder="请输入用户名" autocomplete="off" class="layui-input" style="width:30%;">
 </p>
 </p>
 <p class="layui-form-item" style="margin-bottom: -5%">
     <label class="layui-form-label">密 码：</label>
 <p class="layui-input-block">
-    <input type="password" name="user.pwd" lay-verify="" required
+    <input id="userPassword"
+           type="password" name="user.pwd" lay-verify="" required
            placeholder="请输入密码" autocomplete="off" class="layui-input" style="width:30%;">
 </p>
 </p>
@@ -37,11 +38,12 @@
 </p>
 <p class="layui-form-item">
     <label class="layui-form-label"></label>
-    <button class="layui-btn layui-btn-normal btn-center" type="submit">登录</button>
+    <button class="layui-btn layui-btn-normal btn-center" onclick="login()" type="submit">登录</button>
 </p>
 </form>
 </p>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="../static/layui/js/login.js"></script>
 <script type="application/javascript" src="../static/layui/layui.all.js"></script>
 <link rel="stylesheet" href="../static/layui/css/layui.css">
 </body>
