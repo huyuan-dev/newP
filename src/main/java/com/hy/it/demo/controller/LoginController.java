@@ -2,6 +2,7 @@ package com.hy.it.demo.controller;
 
 import com.hy.it.demo.entity.User;
 import com.hy.it.demo.service.IUserService;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 @Controller
+@ResponseBody
 @RequestMapping("login")
 public class LoginController {
     @Autowired
@@ -43,6 +45,17 @@ public class LoginController {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("login1");
         return modelAndView;
+    }
+
+    /**
+     * @Function: 短信验证接口
+     * @author: Yangxf
+     * @Date: 2019/4/11 15:39
+     */
+    @PostMapping("/smsverification")
+    public Object SmsVerification(String phone) {
+        return userService.SmsVerification(phone);
+
     }
     @RequestMapping("/deparment")
     public ModelAndView deparment() {
