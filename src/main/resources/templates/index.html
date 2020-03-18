@@ -3,9 +3,55 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>8888888888</title>
+    <link rel="stylesheet" href="../static/layui/css/layui.css">
+    <title>熊大科技</title>
 </head>
+<style type="text/css">
+    .rightmenu{font-size:12px; padding:5px 10px; border-radius: 2px;}
+    .rightmenu li{line-height:20px; cursor: pointer;}
+    ul.layui-tab-title li:first-child i{display:none;}
+</style>
 <body>
-<h1 >欢迎来到英雄联盟</h1>
+<div class="layui-tab layui-tab-card site-demo-button" style="position: relative;">
+    <ul class="layui-nav layui-nav-tree layui-nav-side" lay-filter="treenav">
+        <li class="layui-nav-item">
+            <a href="javascript:;" >控制台</a>
+            <dl class="layui-nav-child">
+                <dd><a href="javascript:;"class="site-url" data-id="1" data-title="部门管理" data-url="deparment">部门管理</a></dd>
+                <dd><a href="javascript:;" class="site-url" data-title="权限管理" data-id="5" data-url="http://www.163.com">权限管理</a></dd>
+                <dd><a href="javascript:;" class="site-url" data-title="图表管理" data-id="6" data-url="http://www.tmall.com">图表管理</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item"><a href="javascript:;" class="site-url" data-title="组件" data-id="2" data-url="http://www.baidu.com">组件</a></li>
+        <li class="layui-nav-item"><a href="javascript:;" class="site-url" data-title="应用" data-id="3" data-url="http://news.qq.com">应用</a></li>
+        <li class="layui-nav-item">
+            <a href="javascript:;">设置</a>
+            <dl class="layui-nav-child">
+                <dd><a href="javascript:;" class="site-url" data-title="系统设置" data-id="4" data-url="http://www.sina.com.cn">系统设置</a></dd>
+                <dd><a href="javascript:;" class="site-url" data-title="网站设置" data-id="5" data-url="http://www.163.com">网站设置</a></dd>
+                <dd><a href="javascript:;" class="site-url" data-title="修改密码" data-id="6" data-url="http://www.tmall.com">修改密码</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item"><a href="javascript:;" class="site-url" data-title="社区" data-id="7" data-url="http://fly.layui.com/">社区</a></li>
+    </ul>
+    <div class="layui-tab layui-tab-brief" lay-filter="contentnav" lay-allowClose="true" style="margin-left:200px;margin-top:0;">
+        <ul class="layui-tab-title">
+            <li class="layui-this">首页</li>
+        </ul>
+        <ul class="layui-bg-green rightmenu" style="display: none;position: absolute;">
+            <li data-type="closethis">关闭当前</li>
+            <li data-type="closeall">关闭所有</li>
+        </ul>
+        <div class="layui-tab-content" style="padding:0;">
+            <div class="layui-tab-item layui-show">
+                <img src="../static/layui/image/xiongda.jpeg">
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="../static/layui/layui.js"></script>
+<script type="text/javascript" src="../static/layui/layui.all.js"></script>
+<script type="text/javascript" src="../static/layui/js/commn.js"></script>
 </body>
 </html>
