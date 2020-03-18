@@ -153,9 +153,21 @@ layui.use(['form', 'layedit', 'laydate'], function () {
         var b = Math.floor(Math.random() * 256);
         return "rgb(" + r + "," + g + "," + b + ")";
     }
+    
+
 
 });
 
-
+function zhuce() {
+    layer.open({
+        type: 2,
+        title: false,
+        closeBtn: 0,
+        shadeClose: true,
+        area: ['500px', '450px'],
+        skin: 'yourclass',
+        content: 'regiest'
+    });
+}
 
 

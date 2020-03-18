@@ -51,4 +51,11 @@ public class LoginController {
         return modelAndView;
     }
 
+    @RequestMapping("/regiest")
+    public ModelAndView regiest() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("regiest");
+        return modelAndView;
+    }
+
 }
